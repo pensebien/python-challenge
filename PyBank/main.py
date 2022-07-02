@@ -25,9 +25,10 @@ with open (file,'r') as text:
 
     for n, row in enumerate(readercsv):
         # You are free to delete this part
-        # The line 23 above if for the code to get an enumerator. Something like a counter. The goal is that I want to skip
-        # the first loop. I use the variable "n" to store the Value
-        # of the counter. 
+        # The line above is intend for the code to get an enumerator. 
+        # Something like a counter. 
+        # The goal is to I want to skip the first loop. 
+        # I use the variable "n" to store the Value of the counter. 
 
 
         rows.append(row)
@@ -35,9 +36,8 @@ with open (file,'r') as text:
         if n >  0:
             monthly_change = (int(row[1]) - previous_value)
             total_monthlychange += monthly_change
-            # Answering the before last and last question.
-
-        # First.
+            
+        # Answering the before last and last question.
         # 1. We need to have all the changes in the P&L so we can compare them
         # 2. The greatest would be the Greatest Increase in Profits
         # 3. The smallest would be Greatest Decrease in Profits
@@ -55,15 +55,6 @@ with open (file,'r') as text:
 
         total += int(row[1])
         previous_value = int(row[1])
-        
-        # Answering the before last and last question.
-
-        # First.
-        # 1. We need to have all the changes in the P&L so we can compare them
-        # 2. The greatest would be the Greatest Increase in Profits
-        # 3. The smallest would be Greatest Decrease in Profits
-
-        # Obviously in our For Loop, we have being calculating monthlychange, all we need to do now is put it into an Array.
 
 average_change = ((total_monthlychange)/(len(rows)-1))
 
